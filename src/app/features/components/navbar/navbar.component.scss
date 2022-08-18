@@ -1,0 +1,28 @@
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__image {
+  width: 125px;
+}
+
+.navbar__menu-icon {
+  font-weight: bold;
+}
+
+.navbar__menu-button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+
+.menusito{
+  background-color: red;
+}
