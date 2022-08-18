@@ -9,10 +9,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BetComponent } from './views/bet/bet.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { LoginComponent } from './views/login/login.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, NavbarComponent, FooterComponent, BetComponent, SliderComponent],
+  declarations: [HomeComponent, NavbarComponent, FooterComponent, BetComponent, SliderComponent, LoginComponent],
   imports: [CommonModule, FeaturesRoutingModule, MaterialModule, NgSimpleCarouselModule],
 })
 export class FeaturesModule {}

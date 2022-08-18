@@ -1,0 +1,36 @@
+/*Mobile background view*/
+.login-form__container {
+  height: 60vh;
+  width: 100vw;
+  background-image: url("../../../../assets/login-hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form__selection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: fixed;
+  bottom: 0;
+
+  background: #ffffff;
+  border-radius: 25px 25px 0px 0px;
+  padding: 25px 0px;
+}
+
+.login-form__selection-text {
+  text-align: center;
+  padding: 30px;
+}
+
+.login-form__selection-button {
+  background: #ed1c24;
+  color: #ffffff;
+
+  width: 90px;
+  margin: auto 20px;
+}
