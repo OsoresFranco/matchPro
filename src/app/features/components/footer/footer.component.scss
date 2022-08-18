@@ -1,0 +1,46 @@
+.footer__container {
+  width: 100%;
+  min-height: 50px;
+
+  background: #292929;
+  color: #666666;
+}
+
+.footer__logo__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+}
+
+.footer__logo {
+  margin: 0.5rem;
+  width: 6rem;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.footer__map-site {
+  display: flex;
+  justify-content: space-evenly;
+
+  font-size: 12px;
+}
+
+.footer__rrss-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  > * {
+    height: 24px;
+    width: 24px;
+    margin: 20px 10px;
+  }
+}

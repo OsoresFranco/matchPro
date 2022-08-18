@@ -1,7 +1,20 @@
 .home__header {
   padding: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 .wrap_carousel {
   width: 100%;
+}
+
+.home__footer{
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+}
+
+.main-content__container{
+  height: 100vh;
 }
