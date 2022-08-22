@@ -7,6 +7,14 @@
   background-position: center;
 }
 
+@media only screen and (min-width: 992px) {
+  .login-form__container{
+    background-image: url("../../../../assets/desktop-login-back.png");
+    background-position: top;
+  }
+}
+
+
 .login-form__selection {
   width: 100%;
   display: flex;
