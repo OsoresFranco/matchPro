@@ -5,9 +5,6 @@
   z-index: 5;
 }
 
-.wrap_carousel {
-  width: 100%;
-}
 
 .home__footer{
   position: relative;
@@ -16,5 +13,6 @@
 }
 
 .main-content__container{
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
