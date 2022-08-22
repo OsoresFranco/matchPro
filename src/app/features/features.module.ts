@@ -11,10 +11,11 @@ import { BetComponent } from './views/bet/bet.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { LoginComponent } from './views/login/login.component';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
+import { RegisterDialogComponent } from './components/register-dialog/register-dialog.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, NavbarComponent, FooterComponent, BetComponent, SliderComponent, LoginComponent, LoginDialogComponent],
+  declarations: [HomeComponent, NavbarComponent, FooterComponent, BetComponent, SliderComponent, LoginComponent, LoginDialogComponent, RegisterDialogComponent],
   imports: [CommonModule, FeaturesRoutingModule, MaterialModule, NgSimpleCarouselModule],
 })
 export class FeaturesModule {}
