@@ -5,6 +5,7 @@ import { FeaturesComponent } from './views/features.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RankingComponent } from './views/ranking/ranking.component';
+import { ResultsComponent } from './views/results/results.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'bet', component: BetComponent },
       { path: 'ranking', component: RankingComponent },
+      { path: 'results', component: ResultsComponent },
     ],
   },
 ];

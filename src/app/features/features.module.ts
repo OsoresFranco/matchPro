@@ -18,6 +18,8 @@ import { MatchComponent } from './components/match/match.component';
 import { BetMatchComponent } from './components/bet-match/bet-match.component';
 import { RankingTableComponent } from './components/ranking-table/ranking-table.component';
 import { RankingComponent } from './views/ranking/ranking.component';
+import { ResultCardComponent } from './components/result-card/result-card.component';
+import { ResultsComponent } from './views/results/results.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { RankingComponent } from './views/ranking/ranking.component';
     BetMatchComponent,
     RankingTableComponent,
     RankingComponent,
+    ResultCardComponent,
+    ResultsComponent,
   ],
   imports: [
     CommonModule,
