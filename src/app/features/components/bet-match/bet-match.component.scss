@@ -1,0 +1,45 @@
+.bet-match-card__container {
+  width: 275px;
+  margin-bottom: 20px;
+}
+
+.bet-match__header-icon {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.bet-match-card__team-flag {
+  width: 75px;
+  height: 50px;
+}
+
+.bet-match-card__match-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bet-match-card__team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bet-match-card__actions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bet-match-card__team-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #151515;
+}
+
+.bet-match-card__input {
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+}
