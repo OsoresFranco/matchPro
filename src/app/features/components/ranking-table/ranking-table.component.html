@@ -1,0 +1,23 @@
+<section class="ranking-table__container mat-elevation-z8" tabindex="0">
+  <table mat-table [dataSource]="jugadores">
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef>Nombre</th>
+      <td mat-cell *matCellDef="let jugador">{{ jugador.nombre }}</td>
+      <td mat-footer-cell *matFooterCellDef>Tus Puntos</td>
+    </ng-container>
+
+    <!-- Points Column -->
+    <ng-container matColumnDef="puntos">
+      <th mat-header-cell *matHeaderCellDef>Puntos</th>
+      <td mat-cell *matCellDef="let jugador">
+        {{ jugador.puntos }}
+      </td>
+      <td mat-footer-cell *matFooterCellDef>165</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+  </table>
+</section>

@@ -10,6 +10,7 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -21,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatIconModule,
     MatCardModule,
+    MatTableModule,
   ],
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {} },

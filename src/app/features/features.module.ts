@@ -16,6 +16,8 @@ import { RegisterDialogComponent } from './components/register-dialog/register-d
 import { FeaturesComponent } from './views/features.component';
 import { MatchComponent } from './components/match/match.component';
 import { BetMatchComponent } from './components/bet-match/bet-match.component';
+import { RankingTableComponent } from './components/ranking-table/ranking-table.component';
+import { RankingComponent } from './views/ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { BetMatchComponent } from './components/bet-match/bet-match.component';
     RegisterDialogComponent,
     MatchComponent,
     BetMatchComponent,
+    RankingTableComponent,
+    RankingComponent,
   ],
   imports: [
     CommonModule,
