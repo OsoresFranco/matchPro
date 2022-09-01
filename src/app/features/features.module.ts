@@ -12,10 +12,27 @@ import { SliderComponent } from './components/slider/slider.component';
 import { LoginComponent } from './views/login/login.component';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
 import { RegisterDialogComponent } from './components/register-dialog/register-dialog.component';
-
+import { FeaturesComponent } from './views/features.component';
+import { MatchComponent } from './components/match/match.component';
 
 @NgModule({
-  declarations: [HomeComponent, NavbarComponent, FooterComponent, BetComponent, SliderComponent, LoginComponent, LoginDialogComponent, RegisterDialogComponent],
-  imports: [CommonModule, FeaturesRoutingModule, MaterialModule, NgSimpleCarouselModule],
+  declarations: [
+    FeaturesComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
+    BetComponent,
+    SliderComponent,
+    LoginComponent,
+    LoginDialogComponent,
+    RegisterDialogComponent,
+    MatchComponent,
+  ],
+  imports: [
+    CommonModule,
+    FeaturesRoutingModule,
+    MaterialModule,
+    NgSimpleCarouselModule,
+  ],
 })
 export class FeaturesModule {}

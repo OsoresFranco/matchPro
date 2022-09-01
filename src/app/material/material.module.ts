@@ -9,6 +9,7 @@ import {
 } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -19,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatDialogModule,
     MatInputModule,
     MatIconModule,
+    MatCardModule,
   ],
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {} },
