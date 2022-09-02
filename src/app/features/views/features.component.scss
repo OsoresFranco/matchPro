@@ -1,18 +1,18 @@
 .home__header {
-    padding: 8px;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-  }
-  
-  
-  .home__footer{
-    position: relative;
-    width: 100%;
-    bottom: 0px;
-  }
-  
-  .main-content__container{
-    height: 100%;
-    min-height: 100vh;
-  }
+  margin: 0px;
+  padding: 0px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.home__footer {
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+}
+
+.main-content__container {
+  height: 100%;
+  min-height: 100vh;
+}

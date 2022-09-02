@@ -16,7 +16,7 @@ const routes: Routes = [
     component: FeaturesComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      { path: 'bet', component: BetComponent },
+      { path: 'bet/:id', component: BetComponent },
       { path: 'ranking', component: RankingComponent },
       { path: 'results', component: ResultsComponent },
     ],
