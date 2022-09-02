@@ -1,41 +1,44 @@
-<mat-card class="match-card__container">
-  <mat-card-header class="match-card__header-container">
-    <div class="match__header-icon-container" mat-card-avatar>
-      <img
-        class="match__header-icon"
-        src="../../../../assets/svg-logos/fifa-world-cup-2022-seeklogo.com.svg"
-        alt="Qatar logo"
-      />
-    </div>
-    <mat-card-title>Primera Ronda</mat-card-title>
-    <mat-card-subtitle
-      >16-10-2022 | Stadium: Ras Abu Aboud Stadium</mat-card-subtitle
-    >
-  </mat-card-header>
-  <mat-card-content class="match-card__match-container">
-    <div class="match-card__team-container">
-      <div>
+<div  *ngFor="let match of matches">
+  <mat-card class="match-card__container">
+    <mat-card-header class="match-card__header-container">
+      <div class="match__header-icon-container" mat-card-avatar>
         <img
-          class="match-card__team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/255px-Flag_of_Argentina.svg.png"
-          alt="Equipo Local Bandera"
+          class="match__header-icon"
+          src="../../../../assets/svg-logos/fifa-world-cup-2022-seeklogo.com.svg"
+          alt="Qatar logo"
         />
       </div>
-      <div class="match-card__team-name">Argentina</div>
-    </div>
-    <div>vs</div>
-    <div class="match-card__team-container">
-      <div>
-        <img
-          class="match-card__team-flag"
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/125px-Flag_of_Brazil.svg.png"
-          alt="Equipo Visitante Bandera"
-        />
+      <mat-card-title>{{ match.fase }}</mat-card-title>
+      <mat-card-subtitle
+        >{{ match.fecha }} {{ match.hora }} | Stadium:
+        {{ match.estadio }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <mat-card-content class="match-card__match-container">
+      <div class="match-card__team-container">
+        <div>
+          <img
+            class="match-card__team-flag"
+            src="{{ match.equipo1.bandera }}"
+            alt="Equipo Local Bandera"
+          />
+        </div>
+        <div class="match-card__team-name">{{ match.equipo1.nombre }}</div>
       </div>
-      <div class="match-card__team-name">Brasil</div>
-    </div>
-  </mat-card-content>
-  <mat-card-actions class="match-card__actions-container">
-    <button mat-button class="mp-button" (click)="redirect()">Apostar</button>
-  </mat-card-actions>
-</mat-card>
+      <div>vs</div>
+      <div class="match-card__team-container">
+        <div>
+          <img
+            class="match-card__team-flag"
+            src="{{ match.equipo2.bandera }}"
+            alt="Equipo Visitante Bandera"
+          />
+        </div>
+        <div class="match-card__team-name">{{ match.equipo2.nombre }}</div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="match-card__actions-container">
+      <button mat-button class="mp-button" (click)="redirect()">Apostar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
