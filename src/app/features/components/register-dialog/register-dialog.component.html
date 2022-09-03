@@ -18,6 +18,7 @@
         placeholder="Franco O."
         formControlName="nombre"
       />
+      <mat-error>Este campo es requerido</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
@@ -32,6 +33,7 @@
         placeholder="Ej. yo@miproveedor.com"
         formControlName="email"
       />
+      <mat-error>Este campo es requerido</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
@@ -45,6 +47,7 @@
         placeholder="Password"
         formControlName="password"
       />
+      <mat-error>Este campo es requerido</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
@@ -58,9 +61,11 @@
         placeholder="password"
         (input)="setPassRepeat($event)"
       />
+      <mat-error>Este campo es requerido</mat-error>
     </mat-form-field>
   </form>
   <button
+    [disabled]="user.invalid"
     class="mp-button"
     mat-dialog-close
     mat-raised-button

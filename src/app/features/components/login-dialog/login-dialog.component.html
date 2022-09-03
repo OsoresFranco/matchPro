@@ -18,6 +18,7 @@
         placeholder="Ej. yo@miproveedor.com"
         formControlName="email"
       />
+      <mat-error>Este campo es requerido</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
@@ -31,7 +32,16 @@
         placeholder="Password"
         formControlName="password"
       />
+      <mat-error>Este campo es requerido</mat-error>
     </mat-form-field>
   </form>
-  <button class="mp-button" mat-raised-button (click)="login()" mat-dialog-close>Login</button>
+  <button
+    [disabled]="user.invalid"
+    class="mp-button"
+    mat-raised-button
+    (click)="login()"
+    mat-dialog-close
+  >
+    Login
+  </button>
 </div>
