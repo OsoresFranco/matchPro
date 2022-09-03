@@ -39,7 +39,7 @@ export class BetModalComponent implements OnInit, AfterViewInit {
 
   postBet() {
     if (this.data.winner) {
-      this.betService.putBet(this.match.id, this.bet.value).subscribe({
+      this.betService.putBet(this.data.id, this.bet.value).subscribe({
         next: (res) => {
           console.log(res);
         },
