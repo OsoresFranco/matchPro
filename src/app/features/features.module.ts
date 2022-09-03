@@ -24,6 +24,7 @@ import { ResultCardComponent } from './components/result-card/result-card.compon
 import { ResultsComponent } from './views/results/results.component';
 import { BetModalComponent } from './components/bet-modal/bet-modal.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { Error404Component } from './views/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     ResultsComponent,
     BetModalComponent,
     TooltipComponent,
+    Error404Component,
   ],
   imports: [
     CommonModule,
