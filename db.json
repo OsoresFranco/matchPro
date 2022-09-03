@@ -313,127 +313,33 @@
       "password": "1234"
     },
     {
-      "nombre": "Franco O",
-      "email": "francoo@matchpro.com",
+      "nombre": "Martin",
+      "email": "martin@matchpro.com",
       "password": "123456",
       "puntos": 0,
       "id": 11
     },
     {
-      "nombre": "Franquito",
-      "email": "yo@certant.com",
+      "nombre": "Roberto",
+      "email": "roberto@certant.com",
       "password": "123456",
       "puntos": 0,
       "id": 12
     },
     {
-      "nombre": "marceloo",
-      "email": "marceloo@gmail.com",
+      "nombre": "Gustavo",
+      "email": "gustavo@gmail.com",
       "password": "123456",
       "puntos": 0,
       "id": 13
+    },
+    {
+      "nombre": "Alben",
+      "email": "alben@gmail.com",
+      "password": "123456",
+      "puntos": 0,
+      "id": 14
     }
   ],
-  "bets": [
-    {
-      "match": {
-        "id": 1,
-        "fase": "Fase de Grupos",
-        "fecha": "20/11/2022",
-        "hora": "13:00",
-        "estadio": "Al Bayt",
-        "equipo1": {
-          "nombre": "Qatar",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/qatar-flag-png-large.png"
-        },
-        "equipo2": {
-          "nombre": "Ecuador",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/ecuador-flag-png-large.png"
-        }
-      },
-      "winner": "Ecuador",
-      "email": "cristian@matchpro.com",
-      "id": 1
-    },
-    {
-      "match": {
-        "id": 3,
-        "fase": "Fase de Grupos",
-        "fecha": "21/11/2022",
-        "hora": "10:00",
-        "estadio": "Internacional Khalifa",
-        "equipo1": {
-          "nombre": "Inglaterra",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/england-flag-jpg-xl-1536x922.jpg"
-        },
-        "equipo2": {
-          "nombre": "Irán",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/iran-flag-png-large.png"
-        }
-      },
-      "winner": "tie",
-      "email": "cristian@matchpro.com",
-      "id": 2
-    },
-    {
-      "match": {
-        "id": 5,
-        "fase": "Fase de Grupos",
-        "fecha": "22/11/2022",
-        "hora": "07:00",
-        "estadio": "Lusail",
-        "equipo1": {
-          "nombre": "Argentina",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/argentina-flag-png-xl.png"
-        },
-        "equipo2": {
-          "nombre": "Arabia Saudí",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/saudi-arabia-flag-png-large.png"
-        }
-      },
-      "winner": "Argentina",
-      "email": "cristian@matchpro.com",
-      "id": 3
-    },
-    {
-      "match": {
-        "id": 6,
-        "fase": "Fase de Grupos",
-        "fecha": "22/11/2022",
-        "hora": "13:00",
-        "estadio": "Estadio 974",
-        "equipo1": {
-          "nombre": "Mexico",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/mexico-flag-png-large.png"
-        },
-        "equipo2": {
-          "nombre": "Polonia",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/poland-flag-png-large.png"
-        }
-      },
-      "winner": "Mexico",
-      "email": "cristian@matchpro.com",
-      "id": 4
-    },
-    {
-      "match": {
-        "id": 12,
-        "fase": "Fase de Grupos",
-        "fecha": "23/11/2022",
-        "hora": "16:00",
-        "estadio": "Ahmad Bin Ali",
-        "equipo1": {
-          "nombre": "Belgica",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/flag-jpg-xl-18-1536x1331.jpg"
-        },
-        "equipo2": {
-          "nombre": "Canada",
-          "bandera": "https://www.countryflags.com/wp-content/uploads/canada-flag-png-xl.png"
-        }
-      },
-      "winner": "tie",
-      "email": "cristian@matchpro.com",
-      "id": 5
-    }
-  ]
+  "bets": []
 }
