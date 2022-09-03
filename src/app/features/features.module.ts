@@ -23,6 +23,7 @@ import { RankingComponent } from './views/ranking/ranking.component';
 import { ResultCardComponent } from './components/result-card/result-card.component';
 import { ResultsComponent } from './views/results/results.component';
 import { BetModalComponent } from './components/bet-modal/bet-modal.component';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { BetModalComponent } from './components/bet-modal/bet-modal.component';
     ResultCardComponent,
     ResultsComponent,
     BetModalComponent,
+    TooltipComponent,
   ],
   imports: [
     CommonModule,

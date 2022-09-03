@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
+
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../core/guards/auth.guard';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { BetComponent } from './views/bet/bet.component';
 import { FeaturesComponent } from './views/features.component';
 import { HomeComponent } from './views/home/home.component';
@@ -11,6 +13,7 @@ import { ResultsComponent } from './views/results/results.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'tooltip', component: TooltipComponent },
 
   {
     path: '',

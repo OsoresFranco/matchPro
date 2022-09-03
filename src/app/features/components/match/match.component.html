@@ -12,7 +12,8 @@
         <mat-card-title>{{ match.fase }}</mat-card-title>
         <mat-card-subtitle
           >{{ match.fecha }} {{ match.hora }} | Stadium:
-          {{ match.estadio }}</mat-card-subtitle
+          <span class="stadium"><app-tooltip [stadium]="match.estadio"></app-tooltip></span>
+          </mat-card-subtitle
         >
       </mat-card-header>
       <mat-card-content class="match-card__match-container">

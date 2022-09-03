@@ -1,0 +1,12 @@
+<div
+class="container"
+  mat-raised-button
+  [mtxTooltip]="tooltipTpl"
+  [mtxTooltipPosition]="'after'"
+>
+  {{stadium}}
+</div>
+
+<ng-template #tooltipTpl>
+  <img src="../../../../assets/{{stadium}}.png" alt="{{stadium}}" />
+</ng-template>
