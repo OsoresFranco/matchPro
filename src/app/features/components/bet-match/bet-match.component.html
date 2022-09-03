@@ -1,53 +1,33 @@
-<form [formGroup]="form">
-  <mat-card class="bet-match-card__container">
-    <mat-card-header class="bet-match-card__header-container">
-      <div class="bet-match__header-icon-container" mat-card-avatar>
+<div class="bet-match-card__container">
+  <div class="bet-match-card__match-title">
+    <span>{{ bet.match.fecha }} | {{ bet.match.hora }}</span>
+    <div class="bet-match-card__match">
+      <div class="bet-match-card__team">
         <img
-          class="bet-match__header-icon"
-          src="../../../../assets/svg-logos/fifa-world-cup-2022-seeklogo.com.svg"
-          alt="Qatar logo"
+          class="bet-match-card__team-flag"
+          src="{{ bet.match.equipo1.bandera }}"
+          alt="Team 1 flag"
         />
-      </div>
-      <mat-card-title>Primera Ronda</mat-card-title>
-      <mat-card-subtitle
-        >16-10-2022 | Stadium: Ras Abu Aboud Stadium</mat-card-subtitle
-      >
-    </mat-card-header>
-    <mat-card-content class="bet-match-card__match-container">
-      <div class="bet-match-card__team-container">
-        <div>
-          <img
-            class="bet-match-card__team-flag"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/255px-Flag_of_Argentina.svg.png"
-            alt="Equipo Local Bandera"
-          />
-        </div>
-        <div class="bet-match-card__team-name">Argentina</div>
-        <input
-          class="bet-match-card__input"
-          type="number"
-          formControlName="local"
-        />
+        <div>{{ bet.match.equipo1.nombre }}</div>
       </div>
       <div>vs</div>
-      <div class="bet-match-card__team-container">
-        <div>
-          <img
-            class="bet-match-card__team-flag"
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/125px-Flag_of_Brazil.svg.png"
-            alt="Equipo Visitante Bandera"
-          />
-        </div>
-        <div class="bet-match-card__team-name">Brasil</div>
-        <input
-          class="bet-match-card__input"
-          type="number"
-          formControlName="visitante"
+      <div class="bet-match-card__team">
+        <img
+          class="bet-match-card__team-flag"
+          src="{{ bet.match.equipo2.bandera }}"
+          alt="Team 2 flag"
         />
+        <div>{{ bet.match.equipo2.nombre }}</div>
       </div>
-    </mat-card-content>
-    <mat-card-actions class="bet-match-card__actions-container">
-      <button mat-button class="mp-button" (click)="test()">Apostar</button>
-    </mat-card-actions>
-  </mat-card>
-</form>
+    </div>
+  </div>
+  <div class="bet-match-card__pick">
+    <div class="bet-match-card__pick-title">Mi Apuesta</div>
+    <div class="bet-match-card__selected">{{ bet.winner }}</div>
+  </div>
+  <div class="bet-match-card__actions">
+    <button (click)="updateBet(bet)" class="bet-match-card__actions-item" mat-mini-fab>
+      <mat-icon>assignment_late</mat-icon>
+    </button>
+  </div>
+</div>

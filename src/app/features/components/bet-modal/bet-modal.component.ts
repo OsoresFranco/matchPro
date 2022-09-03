@@ -10,28 +10,40 @@ import { Match } from 'src/app/models/match';
   styleUrls: ['./bet-modal.component.scss'],
 })
 export class BetModalComponent implements OnInit {
-  bet!:FormGroup;
+  bet!: FormGroup;
   match!: Match;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Match, private fb:FormBuilder, private betService:BetService) {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: Match,
+    private fb: FormBuilder,
+    private betService: BetService
+  ) {}
 
   ngOnInit(): void {
     this.match = this.data;
 
     this.bet = this.fb.group({
       match: this.match,
-      winner: ['', Validators.required]
-    })
+      winner: ['', Validators.required],
+    });
   }
 
-  postBet(){
-    this.betService.postBet(this.bet.value).subscribe({
-      next: (res)=>{
-        console.log(res)
-      },
-      error: (error) =>{
-        console.log(error)
-      }
-    })
+  postBet() {
+    if (this.match.id) {
+      this.betService.putBet(this.match.id, this.bet.value).subscribe({
+        next:(res)=>{
+          console.log(res)
+        }
+      })
+    } else {
+      this.betService.postBet(this.bet.value).subscribe({
+        next: (res) => {
+          console.log(res);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
+    }
   }
 }
