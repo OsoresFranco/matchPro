@@ -36,7 +36,7 @@ export class BetMatchComponent implements OnInit {
 
   updateBet(bet: Bet) {
     this.matDialog.open(BetModalComponent, {
-      data: bet.match,
+      data: bet,
     });
   }
 

@@ -36,6 +36,7 @@ export class LoginDialogComponent implements OnInit {
       complete: () => {
         userList?.map((item: any) => {
           if (this.user.get('email')?.value === item.email) {
+            localStorage.setItem('email', this.user.get('email')?.value)
             this.router.navigate(['home']);
           }
         });
