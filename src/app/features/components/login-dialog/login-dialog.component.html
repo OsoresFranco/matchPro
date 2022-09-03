@@ -5,7 +5,7 @@
     alt="Matchpro Logo"
   />
   <div class="login-form__title">Bienvenido Nuevamente</div>
-  <form class="" autocomplete="off" class="login-form">
+  <form [formGroup]="user" autocomplete="off" class="login-form">
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <mat-icon class="form-field__icon" matPrefix>email</mat-icon>
@@ -16,6 +16,7 @@
         id="email"
         matInput
         placeholder="Ej. yo@miproveedor.com"
+        formControlName="email"
       />
     </mat-form-field>
 
@@ -28,8 +29,9 @@
         id="password"
         matInput
         placeholder="Password"
+        formControlName="password"
       />
     </mat-form-field>
   </form>
-  <button class="mp-button" mat-raised-button>Login</button>
+  <button class="mp-button" mat-raised-button (click)="login()" mat-dialog-close>Login</button>
 </div>
