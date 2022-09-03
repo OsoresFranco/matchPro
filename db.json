@@ -247,70 +247,70 @@
       "nombre": "Franco",
       "email": "franco@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 2,
       "nombre": "Alben",
       "email": "alben@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 3,
       "nombre": "Cristian",
       "email": "cristian@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 4,
       "nombre": "Sebastian",
       "email": "sebastian@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 5,
       "nombre": "Esteban",
       "email": "esteban@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 6,
       "nombre": "Dario",
       "email": "dario@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 7,
       "nombre": "Marcelo",
       "email": "marcelo@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 8,
       "nombre": "Exequiel",
       "email": "exequiel@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 9,
       "nombre": "Enzo",
       "email": "enzo@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "id": 10,
       "nombre": "Gaston",
       "email": "gaston@matchpro.com",
       "puntos": 0,
-      "password": "1234"
+      "password": "123456"
     },
     {
       "nombre": "Martin",
@@ -341,5 +341,26 @@
       "id": 14
     }
   ],
-  "bets": []
+  "bets": [
+    {
+      "match": {
+        "id": 13,
+        "fase": "Fase de Grupos",
+        "fecha": "24/11/2022",
+        "hora": "07:00",
+        "estadio": "Al Janoub",
+        "equipo1": {
+          "nombre": "Suiza",
+          "bandera": "https://www.countryflags.com/wp-content/uploads/switzerland-flag-png-large.png"
+        },
+        "equipo2": {
+          "nombre": "Camerún",
+          "bandera": "https://www.countryflags.com/wp-content/uploads/cameroon-flag-png-large.png"
+        }
+      },
+      "winner": "tie",
+      "email": "alben@gmail.com",
+      "id": 1
+    }
+  ]
 }

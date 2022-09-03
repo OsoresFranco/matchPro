@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  Inject,
-  OnInit,
-} from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
@@ -15,16 +10,15 @@ import { BetService } from 'src/app/core/services/bet.service';
   templateUrl: './bet-modal.component.html',
   styleUrls: ['./bet-modal.component.scss'],
 })
-export class BetModalComponent implements OnInit, AfterViewInit{
+export class BetModalComponent implements OnInit, AfterViewInit {
   bet!: FormGroup;
   match!: any;
-
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
     private betService: BetService,
-    private alertsService: AlertsService,
+    private alertsService: AlertsService
   ) {}
 
   ngOnInit(): void {
@@ -43,7 +37,6 @@ export class BetModalComponent implements OnInit, AfterViewInit{
 
   ngAfterViewInit(): void {
     this.bet.get('email')?.setValue(localStorage.getItem('email'));
-    console.log(this.data);
   }
 
   postBet() {
@@ -63,9 +56,6 @@ export class BetModalComponent implements OnInit, AfterViewInit{
             'Apuesta creada con exito!',
             'Puedes modificar tu apuesta si lo necesitas'
           );
-        },
-        error: (error) => {
-          console.log(error);
         },
       });
     }
