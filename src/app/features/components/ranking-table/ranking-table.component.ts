@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/core/services/user.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-ranking-table',
@@ -7,30 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RankingTableComponent implements OnInit {
   displayedColumns = ['nombre', 'puntos'];
-  jugadores: any[] = [
-    { nombre: 'Juan', puntos: 35 },
-    { nombre: 'Jose', puntos: 14 },
-    { nombre: 'Franco', puntos: 28 },
-    { nombre: 'Dario', puntos: 8 },
-    { nombre: 'Juan', puntos: 35 },
-    { nombre: 'Jose', puntos: 14 },
-    { nombre: 'Franco', puntos: 28 },
-    { nombre: 'Dario', puntos: 8 },
-    { nombre: 'Juan', puntos: 35 },
-    { nombre: 'Jose', puntos: 14 },
-    { nombre: 'Franco', puntos: 28 },
-    { nombre: 'Dario', puntos: 8 },
-    { nombre: 'Juan', puntos: 35 },
-    { nombre: 'Jose', puntos: 14 },
-    { nombre: 'Franco', puntos: 28 },
-    { nombre: 'Dario', puntos: 8 },
-    { nombre: 'Juan', puntos: 35 },
-    { nombre: 'Jose', puntos: 14 },
-    { nombre: 'Franco', puntos: 28 },
-    { nombre: 'Dario', puntos: 8 },
-  ];
+  jugadores!:any
 
-  constructor() {}
+  constructor(private userService:UserService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe({
+      next: (res)=>{
+        this.jugadores = res
+      }
+    })
+  }
 }

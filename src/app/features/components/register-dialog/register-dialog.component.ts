@@ -14,16 +14,16 @@ export class RegisterDialogComponent implements OnInit {
 
   data: any;
 
-  passRepeat:string = ''
+  passRepeat: string = '';
 
-  setPassRepeat(event:any){
-    this.passRepeat = event.target.value
+  setPassRepeat(event: any) {
+    this.passRepeat = event.target.value;
   }
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public matDialog: MatDialog,
     private fb: FormBuilder,
-    private userService:UserService
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
@@ -31,18 +31,19 @@ export class RegisterDialogComponent implements OnInit {
       nombre: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
+      puntos: 0,
     });
   }
 
   register() {
-    if(this.passRepeat === this.user.get('password')?.value){
+    if (this.passRepeat === this.user.get('password')?.value) {
       this.userService.postUser(this.user.value).subscribe({
-        next: (res)=>{
-          console.log(res)
-        }
-      })
+        next: (res) => {
+          console.log(res);
+        },
+      });
     } else {
-      console.log(' No funciona lcoo')
+      console.log(' No funciona lcoo');
     }
   }
 }

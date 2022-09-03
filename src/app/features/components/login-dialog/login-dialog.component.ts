@@ -32,7 +32,6 @@ export class LoginDialogComponent implements OnInit {
     this.authService.login().subscribe({
       next: (res) => {
         userList = res;
-        console.log(res);
       },
       complete: () => {
         userList?.map((item: any) => {
