@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { BetService } from 'src/app/core/services/bet.service';
 import { MatchService } from 'src/app/core/services/match.service';
+import { Bet } from 'src/app/models/bet';
 import { Match } from 'src/app/models/match';
 import { BetModalComponent } from '../bet-modal/bet-modal.component';
 
@@ -15,12 +17,12 @@ export class MatchComponent implements OnInit {
     this.router.navigate(['bet']);
   }
 
-  matches: any[] = [];
+  matches: Match[] = [];
 
   constructor(
     private router: Router,
     private matchService: MatchService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
   ) {}
 
   betDialog(match: Match) {
@@ -29,9 +31,13 @@ export class MatchComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  getData() {
     this.matchService.getAllMatches().subscribe({
       next: (res) => (this.matches = res),
     });
+  }
+
+  ngOnInit(): void {
+    this.getData();
   }
 }

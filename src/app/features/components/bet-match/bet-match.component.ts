@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
 import { BetService } from 'src/app/core/services/bet.service';
 import { Bet } from 'src/app/models/bet';
 import { BetModalComponent } from '../bet-modal/bet-modal.component';
@@ -12,6 +13,7 @@ import { BetModalComponent } from '../bet-modal/bet-modal.component';
 export class BetMatchComponent implements OnInit {
   allBets: Array<Bet> = [];
   myBets: Array<Bet> = [];
+  subscription!: Subscription;
 
   constructor(private matDialog: MatDialog, private betService: BetService) {}
 
@@ -21,18 +23,24 @@ export class BetMatchComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  getData() {
     this.betService.getBets().subscribe({
       next: (res) => {
         this.allBets = res;
       },
       complete: () => {
-        this.allBets.map((item) => {
-          if (item.email === localStorage.getItem('email')) {
-            this.myBets.push(item);
-          }
-        });
+        this.myBets = this.allBets.filter((item) => {
+          return item.email === localStorage.getItem('email');
+        })
       },
+    });
+  }
+
+
+  ngOnInit(): void {
+    this.getData();
+    this.subscription = this.betService.refresh$.subscribe(() => {
+      this.getData();
     });
   }
 }

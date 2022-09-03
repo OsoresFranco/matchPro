@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { NgSimpleCarouselModule } from 'ng-simple-carousel';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { HomeComponent } from './views/home/home.component';
@@ -47,6 +49,7 @@ import { BetModalComponent } from './components/bet-modal/bet-modal.component';
     MaterialModule,
     NgSimpleCarouselModule,
     ReactiveFormsModule,
+    SweetAlert2Module
   ],
 })
 export class FeaturesModule {}

@@ -153,6 +153,20 @@
       "password": "123456",
       "puntos": 0,
       "id": 11
+    },
+    {
+      "nombre": "Franquito",
+      "email": "yo@certant.com",
+      "password": "123456",
+      "puntos": 0,
+      "id": 12
+    },
+    {
+      "nombre": "marceloo",
+      "email": "marceloo@gmail.com",
+      "password": "123456",
+      "puntos": 0,
+      "id": 13
     }
   ],
   "bets": [
@@ -172,9 +186,49 @@
           "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png"
         }
       },
-      "winner": "Argentina",
+      "winner": "Qatar",
       "email": "franco@matchpro.com",
       "id": 2
+    },
+    {
+      "match": {
+        "id": 1,
+        "fase": "Fase de Grupos",
+        "fecha": "20/11/2022",
+        "hora": "16:00",
+        "estadio": "Al Bayt",
+        "equipo1": {
+          "nombre": "Argentina",
+          "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/255px-Flag_of_Argentina.svg.png"
+        },
+        "equipo2": {
+          "nombre": "Qatar",
+          "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png"
+        }
+      },
+      "winner": "Argentina",
+      "email": "marceloo@gmail.com",
+      "id": 3
+    },
+    {
+      "match": {
+        "id": 4,
+        "fase": "Fase de Grupos",
+        "fecha": "20/11/2022",
+        "hora": "16:00",
+        "estadio": "Al Bayt",
+        "equipo1": {
+          "nombre": "Argentina",
+          "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/255px-Flag_of_Argentina.svg.png"
+        },
+        "equipo2": {
+          "nombre": "Qatar",
+          "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png"
+        }
+      },
+      "winner": "Argentina",
+      "email": "franco@matchpro.com",
+      "id": 4
     }
   ]
 }

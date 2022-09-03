@@ -1,6 +1,13 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
+import { AlertsService } from 'src/app/core/services/alerts.service';
 import { BetService } from 'src/app/core/services/bet.service';
 
 @Component({
@@ -8,14 +15,16 @@ import { BetService } from 'src/app/core/services/bet.service';
   templateUrl: './bet-modal.component.html',
   styleUrls: ['./bet-modal.component.scss'],
 })
-export class BetModalComponent implements OnInit, AfterViewInit {
+export class BetModalComponent implements OnInit, AfterViewInit{
   bet!: FormGroup;
   match!: any;
+
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
-    private betService: BetService
+    private betService: BetService,
+    private alertsService: AlertsService,
   ) {}
 
   ngOnInit(): void {
@@ -41,13 +50,19 @@ export class BetModalComponent implements OnInit, AfterViewInit {
     if (this.data.winner) {
       this.betService.putBet(this.data.id, this.bet.value).subscribe({
         next: (res) => {
-          console.log(res);
+          this.alertsService.confirmAlert(
+            'Apuesta modificada con exito!',
+            'Puedes volver a modificar tu apuesta si lo necesitas'
+          );
         },
       });
     } else {
       this.betService.postBet(this.bet.value).subscribe({
         next: (res) => {
-          console.log(res);
+          this.alertsService.confirmAlert(
+            'Apuesta creada con exito!',
+            'Puedes modificar tu apuesta si lo necesitas'
+          );
         },
         error: (error) => {
           console.log(error);
