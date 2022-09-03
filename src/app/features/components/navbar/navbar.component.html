@@ -8,11 +8,21 @@
     <i class="material-icons navbar__menu-icon">menu</i>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="">Home</button>
-    <button mat-menu-item routerLink="bet">Apuestas</button>
-    <button mat-menu-item routerLink="ranking">Ranking</button>
-    <button mat-menu-item routerLink="results">Resultados</button>
-    <button mat-menu-item (click)="logout()">Salir</button>
+    <button mat-menu-item routerLink="">
+      <mat-icon>home</mat-icon> <span>Home</span>
+    </button>
+    <button mat-menu-item routerLink="bet">
+      <mat-icon>account_balance_wallet</mat-icon> <span>Apuestas</span>
+    </button>
+    <button mat-menu-item routerLink="ranking">
+      <mat-icon>assessment</mat-icon> <span>Ranking</span>
+    </button>
+    <button mat-menu-item routerLink="results">
+      <mat-icon>date_range</mat-icon> <span>Resultados</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon> <span>Logout</span>
+    </button>
   </mat-menu>
   <nav class="navbar__desktop-nav">
     <a mat-menu-item routerLink="">Home</a>
