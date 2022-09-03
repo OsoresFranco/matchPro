@@ -10,29 +10,10 @@ import { BetModalComponent } from '../bet-modal/bet-modal.component';
   styleUrls: ['./bet-match.component.scss'],
 })
 export class BetMatchComponent implements OnInit {
-  bet = {
-    match: {
-      id: 1,
-      fase: 'Fase de Grupos',
-      fecha: '20/11/2022',
-      hora: '16:00',
-      estadio: 'Al Bayt',
-      equipo1: {
-        nombre: 'Argentina',
-        bandera:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/255px-Flag_of_Argentina.svg.png',
-      },
-      equipo2: {
-        nombre: 'Qatar',
-        bandera:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png',
-      },
-    },
-    winner: 'Qatar',
-    id: 1,
-  };
+  allBets: Array<Bet> = [];
+  myBets: Array<Bet> = [];
 
-  constructor(private matDialog: MatDialog) {}
+  constructor(private matDialog: MatDialog, private betService: BetService) {}
 
   updateBet(bet: Bet) {
     this.matDialog.open(BetModalComponent, {
@@ -40,5 +21,18 @@ export class BetMatchComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.betService.getBets().subscribe({
+      next: (res) => {
+        this.allBets = res;
+      },
+      complete: () => {
+        this.allBets.map((item) => {
+          if (item.email === localStorage.getItem('email')) {
+            this.myBets.push(item);
+          }
+        });
+      },
+    });
+  }
 }

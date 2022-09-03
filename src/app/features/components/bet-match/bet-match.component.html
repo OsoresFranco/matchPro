@@ -1,4 +1,4 @@
-<div class="bet-match-card__container">
+<div class="bet-match-card__container" *ngFor="let bet of myBets">
   <div class="bet-match-card__match-title">
     <span>{{ bet.match.fecha }} | {{ bet.match.hora }}</span>
     <div class="bet-match-card__match">
@@ -26,7 +26,11 @@
     <div class="bet-match-card__selected">{{ bet.winner }}</div>
   </div>
   <div class="bet-match-card__actions">
-    <button (click)="updateBet(bet)" class="bet-match-card__actions-item" mat-mini-fab>
+    <button
+      (click)="updateBet(bet)"
+      class="bet-match-card__actions-item"
+      mat-mini-fab
+    >
       <mat-icon>assignment_late</mat-icon>
     </button>
   </div>

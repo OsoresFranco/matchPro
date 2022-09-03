@@ -4,4 +4,5 @@ export interface Bet {
   match: Match,
   winner: string,
   id?: number,
+  email?: string
 }
