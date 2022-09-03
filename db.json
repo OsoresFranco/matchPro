@@ -80,22 +80,30 @@
     {
       "id": 1,
       "nombre": "Franco",
-      "puntos": 0
+      "email": "franco@matchpro.com",
+      "puntos": 0,
+      "password": "1234"
     },
     {
-      "id": 1,
+      "id": 2,
       "nombre": "Alben",
-      "puntos": 0
+      "email": "alben@matchpro.com",
+      "puntos": 0,
+      "password": "1234"
     },
     {
-      "id": 1,
+      "id": 3,
       "nombre": "Cristian",
-      "puntos": 0
+      "email": "cristian@matchpro.com",
+      "puntos": 0,
+      "password": "1234"
     },
     {
-      "id": 1,
+      "id": 4,
       "nombre": "Sebastian",
-      "puntos": 0
+      "email": "sebastian@matchpro.com",
+      "puntos": 0,
+      "password": "1234"
     }
   ],
   "bets": [

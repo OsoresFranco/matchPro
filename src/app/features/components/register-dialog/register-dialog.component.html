@@ -5,7 +5,21 @@
     alt="Matchpro Logo"
   />
   <div class="login-form__title">Registrate para ganar!</div>
-  <form class="" autocomplete="off" class="login-form">
+  <form [formGroup]="user" autocomplete="off" class="login-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <mat-icon class="form-field__icon" matPrefix>face</mat-icon>
+      <input
+        class="login-form__input"
+        type="text"
+        name="name"
+        id="name"
+        matInput
+        placeholder="Franco O."
+        formControlName="nombre"
+      />
+    </mat-form-field>
+
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <mat-icon class="form-field__icon" matPrefix>email</mat-icon>
@@ -16,6 +30,7 @@
         id="email"
         matInput
         placeholder="Ej. yo@miproveedor.com"
+        formControlName="email"
       />
     </mat-form-field>
 
@@ -28,6 +43,7 @@
         id="password"
         matInput
         placeholder="Password"
+        formControlName="password"
       />
     </mat-form-field>
 
@@ -35,13 +51,16 @@
       <mat-label>Repite tu password</mat-label>
       <mat-icon class="form-field__icon" matPrefix>lock</mat-icon>
       <input
-        type="passwordRepeat"
+        type="password"
         name="passwordRepeat"
         id="passwordRepeat"
         matInput
         placeholder="password"
+        (input)="setPassRepeat($event)"
       />
     </mat-form-field>
   </form>
-  <button class="mp-button" mat-raised-button>Login</button>
+  <button class="mp-button" mat-raised-button (click)="register()">
+    Login
+  </button>
 </div>
