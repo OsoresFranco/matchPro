@@ -1,5 +1,5 @@
-<div class="match-card__wrapper">
-  <div *ngFor="let match of matches">
+<form [formGroup]="bet">
+  <div class="match-card__wrapper">
     <mat-card class="match-card__container">
       <mat-card-header class="match-card__header-container">
         <div class="match__header-icon-container" mat-card-avatar>
@@ -25,8 +25,24 @@
             />
           </div>
           <div class="match-card__team-name">{{ match.equipo1.nombre }}</div>
+          <input
+            type="radio"
+            [value]="match.equipo1.nombre"
+            name="winner"
+            formControlName="winner"
+          />
         </div>
-        <div>vs</div>
+        <div class="match-card__tie">
+          <div>vs</div>
+          <div class="match-card__tie-label">empate</div>
+          <input
+            class="match-card__tie-item"
+            type="radio"
+            value="tie"
+            name="winner"
+            formControlName="winner"
+          />
+        </div>
         <div class="match-card__team-container">
           <div>
             <img
@@ -36,13 +52,20 @@
             />
           </div>
           <div class="match-card__team-name">{{ match.equipo2.nombre }}</div>
+          <input
+            type="radio"
+            [value]="match.equipo2.nombre"
+            name="winner"
+            formControlName="winner"
+          />
         </div>
       </mat-card-content>
       <mat-card-actions class="match-card__actions-container">
-        <button mat-button class="mp-button" (click)="betDialog(match)">
+        <button mat-button class="mp-button" (click)="postBet()">
           Apostar
         </button>
       </mat-card-actions>
     </mat-card>
   </div>
-</div>
+  <p class="good-luck">Mucha Suerte!</p>
+</form>

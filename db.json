@@ -77,10 +77,46 @@
     }
   ],
   "users": [
-    { "id": 1, "nombre": "Franco", "puntos": 0 },
-    { "id": 1, "nombre": "Alben", "puntos": 0 },
-    { "id": 1, "nombre": "Cristian", "puntos": 0 },
-    { "id": 1, "nombre": "Sebastian", "puntos": 0 }
+    {
+      "id": 1,
+      "nombre": "Franco",
+      "puntos": 0
+    },
+    {
+      "id": 1,
+      "nombre": "Alben",
+      "puntos": 0
+    },
+    {
+      "id": 1,
+      "nombre": "Cristian",
+      "puntos": 0
+    },
+    {
+      "id": 1,
+      "nombre": "Sebastian",
+      "puntos": 0
+    }
   ],
-  "apuestas": []
+  "bets": [
+    {
+      "match": {
+        "id": 1,
+        "fase": "Fase de Grupos",
+        "fecha": "20/11/2022",
+        "hora": "16:00",
+        "estadio": "Al Bayt",
+        "equipo1": {
+          "nombre": "Argentina",
+          "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/255px-Flag_of_Argentina.svg.png"
+        },
+        "equipo2": {
+          "nombre": "Qatar",
+          "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png"
+        }
+      },
+      "winner": "Qatar",
+      "id": 1
+    }
+  ]
 }

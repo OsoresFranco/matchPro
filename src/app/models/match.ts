@@ -1,17 +1,15 @@
 export interface Match {
-  locals: {
-    teamId: number,
-  };
-  matchDate: string,
-  matchId: number,
-  results: {},
-  stadiums: {
-    stadiumId: number,
-  };
-  stages: {
-    stageId: number,
-  };
-  visitors: {
-    teamId: number,
-  };
+  id: number,
+  fase: string,
+  fecha: string,
+  hora: string,
+  estadio: string,
+  equipo1: {
+    nombre: string,
+    bandera: string,
+  },
+  equipo2: {
+    nombre: string,
+    bandera: string
+  }
 }
